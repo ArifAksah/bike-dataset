@@ -20,8 +20,8 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv(os.path.join(PARENT_DIR, 'day.csv'))
-    hour_df = pd.read_csv(os.path.join(PARENT_DIR, 'hour.csv'))
+    day_df = pd.read_csv(os.path.join(PARENT_DIR, 'data', 'day.csv'))
+    hour_df = pd.read_csv(os.path.join(PARENT_DIR, 'data', 'hour.csv'))
 
     day_df['dteday'] = pd.to_datetime(day_df['dteday'])
     hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
